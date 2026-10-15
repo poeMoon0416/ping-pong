@@ -147,7 +147,7 @@
   - 静的型付けにしてみたくてTSを使っていて、index.htmlをそのまま開くとコンパイル後のJSしかみれずデバッグしにくいからルータ(`src/pingPongHttpServer.ts`)を書いたのかも(ファビコンとかもそのまま開くと動かないかも)
   - Node.jsはローカルでの開発(npmでのTSなど)および動作環境(ルータ, Webサーバ)として使っているだけなので、公開時はHTML/CSS/JS(コンパイル後)を別のリポジトリに分けてGitHubPagesを使うのが手っ取り早そう
 - GitHubPagesでの公開
-  - [公開URL](https://poemoon0416.github.io/ping-pong-page/)
+  - ルートディレクトリでの公開での動作確認完了, /docsでの公開もok
   - 公開にあたっての改変
     - GitHubPagesに載せるファイルは`/docs`以下に配置
     - 別のリポジトリ(`ping-pong-page`)にブラウザで動くただのHTML/CSS/JSに再構成したファイル群を載せて公開する
