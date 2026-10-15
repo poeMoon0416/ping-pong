@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* @import "./common.css"; */
+
+#playing-area {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#point-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#player-point {
+    font-size: 4rem;
+    color: white;
+    background-color: black;
+    border: solid 4px white;
+    margin: 16px;
+}
+
+#com-point {
+    font-size: 4rem;
+    color: white;
+    background-color: black;
+    border: solid 4px white;
+    margin: 16px;
+}
+
+#ground {
+    width: 1024px;
+    height: 512px;
+    background-color: black;
+    border: solid 16px white;
+
+    position: relative;
+}
+
+#ground-border {
+    width: 0px;
+    height: 100%;
+    border: dashed 2px white;
+
+    position: absolute;
+    top: 0;
+    /* parent-client-width(parent-width - parent-border-width) / 2 - child-width / 2 */
+    left: calc((1024px - 32px) / 2 - 4px / 2);
+}
+
+#player {
+    width: 16px;
+    height: 32px;
+    background-color: white;
+
+    position: absolute;
+    /* parent-client-height(parent-height - parent-border-height) / 2 - child-height / 2 */
+    top: calc((512px - 32px) / 2 - 32px / 2);
+    left: 16px;
+}
+
+#com {
+    width: 16px;
+    height: 32px;
+    background-color: white;
+
+    position: absolute;
+    /* parent-client-height(parent-height - parent-border-height) / 2 - child-height / 2 */
+    top: calc((512px - 32px) / 2 - 32px / 2);
+    /* parent-client-width(parent-width - parent-border-width) - child-width - child-right */
+    left: calc(1024px - 32px - 16px - 16px);
+}
+
+#ball {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50% 50%;
+
+    position: absolute;
+    /* parent-client-height(parent-height - parent-border-height) / 2 - child-height / 2 */
+    top: calc((512px - 32px) / 2 - 16px / 2);
+    /* parent-client-width(parent-width - parent-border-width) / 2 - child-width / 2 */
+    left: calc((1024px - 32px) / 2 - 16px / 2);
+}
